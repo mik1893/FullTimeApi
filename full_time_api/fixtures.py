@@ -30,7 +30,7 @@ class Fixtures:
             cells = row.findall("td")
             if not cells:
                 continue
-            fixture = [remove_whitespace(c.text or "") for c in cells]
+            fixture = [remove_whitespace((c.text_content() or "")) for c in cells]
             if any(fixture):
                 fixtures.append(fixture)
         return fixtures

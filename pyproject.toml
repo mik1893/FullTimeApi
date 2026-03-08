@@ -10,10 +10,10 @@ readme = "README.md"
 license = { text = "MIT" }
 keywords = ["Football Association", "Football", "API", "Football Fixtures", "Football Results"]
 authors = [
-    { name = "James Gray", email = "github@gray.ac" }
+    { name = "Michele Roscelli", email = "mcr1893@gmail.com" }
 ]
 maintainers = [
-    { name = "James Gray", email = "github@gray.ac" }
+    { name = "Michele Roscelli", email = "mcr1893@gmail.com" }
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -40,10 +40,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jadgray/FullTimeApi"
-Documentation = "https://github.com/jadgray/FullTimeApi"
-Repository = "https://github.com/jadgray/FullTimeApi"
-Issues = "https://github.com/jadgray/FullTimeApi/issues"
+Homepage = "https://github.com/mik1893/FullTimeApi"
+Documentation = "https://github.com/mik1893/FullTimeApi"
+Repository = "https://github.com/mik1893/FullTimeApi"
+Issues = "https://github.com/mik1893/FullTimeApi/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
