@@ -1,9 +1,11 @@
 """Division API: teams, fixtures, and results with optional formatting."""
 
 from full_time_api.client import FullTimeClient
+from full_time_api.fixture_groups import FixtureGroups
 from full_time_api.formatters import FixtureFormatter, ResultFormatter
 from full_time_api.fixtures import Fixtures
 from full_time_api.results import Results
+from full_time_api.team_fixtures import TeamFixtures
 from full_time_api.teams import Teams
 
 
@@ -15,7 +17,21 @@ class Division:
         self._formatter = ResultFormatter()
         self._teams = Teams(self._client)
         self._fixtures = Fixtures(self._client)
+        self._fixture_groups = FixtureGroups(self._client)
         self._results = Results(self._client)
+        self._team_fixtures = TeamFixtures(self._client)
+
+    def get_fixture_groups(
+        self, league_id: int, season_id: int
+    ) -> list[dict[str, str]]:
+        """Return fixture groups for the league/season (id and name). Excludes 'All'."""
+        return self._fixture_groups.get_fixture_groups(league_id, season_id)
+
+    def get_team_fixtures(
+        self, season_id: int, team_id: int
+    ) -> list[list[str]]:
+        """Return all fixtures for a team (header row + data rows). Columns: Season ID, Team ID, Fixture ID, Type, Date, Time, Home Team, Away Team, Venue, Competition, Status, Is Home Match."""
+        return self._team_fixtures.get_team_fixtures(season_id, team_id)
 
     def get_teams(self, season_id: int, group_id: str) -> list[str]:
         """Return list of team names for the given season and group."""
