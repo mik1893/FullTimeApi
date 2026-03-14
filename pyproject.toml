@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "full-time-api"
-version = "1.0.0"
+version = "1.0.1"
 description = "A simple tool to help obtain fixture information from the FA Full-Time system."
 readme = "README.md"
 license = { text = "MIT" }

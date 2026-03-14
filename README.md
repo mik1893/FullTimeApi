@@ -1,6 +1,6 @@
 # full-time-api (Python)
 
-A simple tool to obtain fixture information from the FA Full-Time system. This is the Python port of the [jadgray/full-time-api](https://github.com/jadgray/FullTimeApi) PHP package.
+A simple tool to obtain fixture information from the FA Full-Time system.
 
 ## Requirements
 
